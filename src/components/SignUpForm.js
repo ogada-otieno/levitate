@@ -54,6 +54,7 @@ const SignUpForm = () => {
 
   return (
     <section>
+        <div>
       <p
         ref={errRef}
         className={errMsg ? "errmsg" : "offscreen"}
@@ -61,21 +62,40 @@ const SignUpForm = () => {
       >
         {errMsg}
       </p>
+      </div>
       <h1>Register</h1>
       <form>
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="username">
+          Username:
+          <span className={validName ? "valid" : "hide"}>
+            <FontAwesomeIcon icon={faCheck} />
+          </span>
+          <span className={validName || !user ? "hide" : "invalid"}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </label>
         <input
-        type="text"
-        id="username"
-        ref={userRef}
-        autoComplete="off"
-        onChange={(e) => setUser(e.target.value)}
-        required
-        aria-invalid={validName ? "false" : "true"}
-        aria-describedby="uidnote"
-        onFocus={() => setUserFocus(true)}
-        onBlur={() => setUserFocus(false)}
+          type="text"
+          id="username"
+          ref={userRef}
+          autoComplete="off"
+          onChange={(e) => setUser(e.target.value)}
+          required
+          aria-invalid={validName ? "false" : "true"}
+          aria-describedby="uidnote"
+          onFocus={() => setUserFocus(true)}
+          onBlur={() => setUserFocus(false)}
         />
+        <div
+          id="uidnote"
+          className={userFocus && user && !validName ? "instructions" : "offscreen"}>
+          <FontAwesomeIcon icon={faInfoCircle} />
+          <p>
+          4 to 24 character.<br />
+          Must begin with a letter.<br />
+          Letters, numbers, underscores, hyphens allowed.
+          </p>
+        </div>
       </form>
     </section>
   );
