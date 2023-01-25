@@ -35,10 +35,15 @@ function DisplayShots() {
       );
     });
 
+  const newShots = (newShot) => {
+    const updatedShots = [...shots, newShot];
+    setShots(updatedShots);
+  };
+
   return (
     <div>
-      {display.length > 0 ? <>{display}</> : <p>No shots to display</p>}
-      <CreateShots />
+      {display.length > 0 ? <>{display}</> : <p>You don't have any project or shot to display!</p>}
+      <CreateShots newShots={newShots} />
     </div>
   );
 }
