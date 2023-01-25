@@ -53,8 +53,7 @@ const SignUpForm = () => {
   }, [user, pwd, matchPwd]);
 
   return (
-    <section>
-        <div>
+    <div>
       <p
         ref={errRef}
         className={errMsg ? "errmsg" : "offscreen"}
@@ -62,7 +61,6 @@ const SignUpForm = () => {
       >
         {errMsg}
       </p>
-      </div>
       <h1>Register</h1>
       <form>
         <label htmlFor="username">
@@ -86,18 +84,88 @@ const SignUpForm = () => {
           onFocus={() => setUserFocus(true)}
           onBlur={() => setUserFocus(false)}
         />
-        <div
+        <p
           id="uidnote"
-          className={userFocus && user && !validName ? "instructions" : "offscreen"}>
+          className={
+            userFocus && user && !validName ? "instructions" : "offscreen"
+          }
+        >
           <FontAwesomeIcon icon={faInfoCircle} />
-          <p>
-          4 to 24 character.<br />
-          Must begin with a letter.<br />
+          4 to 24 character.
+          <br />
+          Must begin with a letter.
+          <br />
           Letters, numbers, underscores, hyphens allowed.
-          </p>
-        </div>
+        </p>
+
+        <label htmlFor="password">
+          Password:
+          <span className={validPwd ? "valid" : "hide"}>
+            <FontAwesomeIcon icon={faCheck} />
+          </span>
+          <span className={validPwd || !pwd ? "hide" : "invalid"}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </label>
+
+        <input
+          type="password"
+          id="password"
+          onChange={(e) => setPwd(e.target.value)}
+          required
+          aria-invalid={validPwd ? "false" : "true"}
+          aria-describedby="pwdnote"
+          onFocus={() => setPwdFocus(true)}
+          onBlur={() => setPwdFocus(false)}
+        />
+
+        <p
+          id="pwdnote"
+          className={pwdFocus && !validPwd ? "instructions" : "offscreen"}
+        >
+          <FontAwesomeIcon icon={faInfoCircle} />
+          8 to 24 characters.
+          <br />
+          Must include uppercase and lowercase letters, a number and a special
+          character.
+          <br />
+          Allowed special characters:
+          <span aria-label="exclamation mark">!</span>
+          <span aria-label="at symbol">@</span>
+          <span aria-label="dollar sign">$</span>
+          <span aria-label="percent">%</span>
+        </p>
+
+        <label htmlFor="confirm_pwd">
+          Confirm Password:
+          <span className={validMatch && matchPwd ? "valid" : "hide"}>
+            <FontAwesomeIcon icon={faCheck} />
+          </span>
+          <span className={validMatch || !matchPwd ? "hide" : "invalid"}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </label>
+
+        <input
+          type="password"
+          id="confirm_pwd"
+          onChange={(e) => setMatchPwd(e.target.value)}
+          required
+          aria-invalid={validMatch ? "false" : "true"}
+          aria-describedby="pwdnote"
+          onFocus={() => setMatchFocus(true)}
+          onBlur={() => setMatchFocus(false)}
+        />
+
+        <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
+          <fontAwesomeIcon icon={faInfoCircle}/>
+          Must match the first password input field.
+        </p>
+          
+
+
       </form>
-    </section>
+    </div>
   );
 };
 export default SignUpForm;
