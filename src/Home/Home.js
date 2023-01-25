@@ -1,13 +1,11 @@
 import React from "react";
-import DisplayShots from "../components/DisplayShots";
-
-
+import DisplayProjects from "../components/DisplayProjects";
 
 const Home = () => {
   return (
     <div>
       {/* <h1>Levitate Home Page</h1> */}
-      <DisplayShots />
+      <DisplayProjects />
     </div>
   );
 };
