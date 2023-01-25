@@ -9,7 +9,9 @@ function DisplayProjects() {
   const [projects, setProjects] = useState([]);
   const fetchProjects = () => {
     axios
-      .get(`https://api.dribbble.com/v2/user/projects?access_token=` + accessToken)
+      .get(
+        `https://api.dribbble.com/v2/user/projects?access_token=` + accessToken
+      )
       .then((res) => {
         const fetchedProjects = res.data;
         setProjects(fetchedProjects);
@@ -23,16 +25,14 @@ function DisplayProjects() {
     fetchProjects();
   }, []);
 
-  const display =
-    projects &&
-    projects.map((project) => {
-      return (
-        <div key={project.id}>
-          <h4>{project.name}</h4>
-          <h3>{project.description}</h3>
-        </div>
-      );
-    });
+  const display = projects.map((project) => {
+    return (
+      <div key={project.id}>
+        <h3>{project.name}: </h3>
+        <h5>{project.description}</h5>
+      </div>
+    );
+  });
 
   const newProjects = (newProject) => {
     const updatedProjects = [...projects, newProject];
@@ -41,11 +41,7 @@ function DisplayProjects() {
 
   return (
     <div>
-      {display.length > 0 ? (
-        <>{display}</>
-      ) : (
-        <p>You don't have any project or shot to display!</p>
-      )}
+      {display.length > 0 ? <>{display}</> : <p>No projects...</p>}
       <CreateProjects newProjects={newProjects} />
     </div>
   );

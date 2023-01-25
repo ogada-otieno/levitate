@@ -1,64 +1,53 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
-
-function CreateProjects({ newProjects }) {
-  const [projectData, setProjectData] = useState({
-    name: "",
-    description: "",
-  });
+function CreateProjects() {
+  // const [projectData, setProjectData] = useState();
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
 
   let accessToken =
     "722f0dd81bb8f53c1b09b5b847c5653a85de14e3a53a394e0582815aa6a84936";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let newEntry = { name, description };
+    let url =
+      "https://api.dribbble.com/v2/projects?access_token=722f0dd81bb8f53c1b09b5b847c5653a85de14e3a53a394e0582815aa6a84936";
 
-    const config = {
+    fetch(url, {
+      method: "POST",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
-        // Authorization: `Bearer ${accessToken}`,
-        // "Access-Control-Allow-Origin": "*",
-        // "Access-Control-Allow-Credentials": true,
       },
-    };
-    try {
-      const response = await axios.post(
-        `https://api.dribbble.com/v2/projects?access_token=${accessToken}`,
-        config,
-        projectData
-      );
-      // console.log(response.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  const handleChange = (e) => {
-    const key = e.target.name;
-    const value = e.target.value;
-    setProjectData({ ...projectData, [key]: value });
-  };
+      // mode: "no-cors",
+      body: JSON.stringify(newEntry),
+    }).then((res) => console.log(res));
 
-  // console.log(projectData);
-  newProjects = projectData;
-  // console.log(newProjects);
-  // console.log(response.data);
+    console.log(newEntry);
+    window.location.reload();
+  };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <label>Project name: </label>
         <input
-          onChange={handleChange}
           type="text"
           name="name"
+          value={name}
           placeholder="Name"
+          onChange={(e) => setName(e.target.value)}
         />
-        <input
-          onChange={handleChange}
+        <label>Project description: </label>
+        <textarea
           type="text"
           name="description"
+          value={description}
           placeholder="Description"
-        />
+          onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
         <button type="submit" className="add-btn">
           Add Project
         </button>

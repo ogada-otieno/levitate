@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import Home from "./Home/Home";
 
 function App() {
