@@ -18,8 +18,6 @@ function UserProfile() {
       .catch((err) => console.log(err));
   };
 
-  console.log(userData);
-
   useEffect(() => {
     fetchUser();
   }, []);
@@ -39,8 +37,10 @@ function UserProfile() {
             </p>
             <p>{userData.location}</p>
             <p>{userData.email}</p>
-            <a href='mailto:{userData.email}'>Send email</a>
-            <a href={userData.html_url} target="_blank">Dribbble Account</a>
+            <a href="mailto:{userData.email}">Send email</a>
+            <a href={userData.html_url} target="_blank">
+              Dribbble Account
+            </a>
           </div>
         </div>
       );
