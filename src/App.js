@@ -1,10 +1,10 @@
 import "./App.css";
 import "./index.css";
-import Home from "./Home/Home";
-import Projects from "./Home/Projects";
+import Home from "./Pages/Home";
+import Projects from "./Pages/Projects";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./Home/Navbar";
-import Footer from "./Home/Footer";
+import Navbar from "./Pages/Navbar";
+import Footer from "./Pages/Footer";
 import CreateProjects from "./components/CreateProjects";
 import NotFound from "./components/NotFound";
 
