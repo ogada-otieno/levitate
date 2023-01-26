@@ -45,11 +45,15 @@ input, textarea {
 
 button {
   background: #2eaa70;
-  color: #fff;
+  color: rgb(19, 18, 18);
   border: none;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.container {
+  border-color: #2eaa70;
 }
 
 /* Project previews */
@@ -66,11 +70,15 @@ button {
 .project-preview h2 {
   font-size: 20px;
   margin-bottom: 8px;
-  color: #af2a5f;
+  color: #171817;
 }
 
 .project-preview a {
   text-decoration: none;
+}
+
+.delete-btn{
+background: rgb(197, 17, 17);
 }
 
 /* User details */

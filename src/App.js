@@ -7,17 +7,21 @@ import Navbar from "./Pages/Navbar";
 import Footer from "./Pages/Footer";
 import CreateProjects from "./components/CreateProjects";
 import NotFound from "./components/NotFound";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/projects" element={<Projects />} />
-        <Route exact path="/create" element={<CreateProjects />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/profile" element={<UserProfile />} />
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/create" element={<CreateProjects />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
       <Footer />
     </BrowserRouter>
   );
