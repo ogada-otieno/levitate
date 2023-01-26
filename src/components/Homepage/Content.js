@@ -5,8 +5,8 @@ function Content() {
     <body>
       {/* Search and add section */}
       <section>
-        <div class="ui placeholder segment">
-          <div class="ui stackable center aligned two column grid">
+        <div class="ui placeholder brown segment">
+          <div class="ui stackable center aligned two column brown grid">
             <div class="ui vertical divider">Or</div>
             <div class="middle aligned row">
               <div class="column">
@@ -20,11 +20,11 @@ function Content() {
                       type="text"
                       autoComplete="off"
                       value=""
-                      placeholder="Search countries..."
+                      placeholder="Search projects..."
                       tabindex="0"
                       class="prompt"
                     />
-                    <i aria-hidden="true" class="search icon"></i>
+                    <i aria-hidden="true" class="brown search icon"></i>
                   </div>
                   <div class="results transition">
                     <div class="message empty">
@@ -37,13 +37,13 @@ function Content() {
                 <div class="ui icon header">
                   <i aria-hidden="true" class="world icon"></i>Add New Project
                 </div>
-                <button class="ui primary button">Create</button>
+                <button class="ui brown button">Create</button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* About us section */}
+      {/* About us and conect with friends section */}
       <section>
         <div class="ui segment">
           <div class="ui very relaxed two column grid">
@@ -59,7 +59,7 @@ function Content() {
               </p>
             </div>
             <div class="column">
-              <h4>Connect with friends and family</h4>
+              <h4>Connect with friends</h4>
               <div role="list" class="ui list">
                 <div role="listitem" class="item">
                   <img
@@ -99,7 +99,7 @@ function Content() {
                     class="ui avatar image"
                   />
                   <div class="content">
-                    <a class="header">Matthew</a>
+                    <a class="header">Ali</a>
                     <div class="description">
                       Last upload{" "}
                       <a>
@@ -115,7 +115,7 @@ function Content() {
                     class="ui avatar image"
                   />
                   <div class="content">
-                    <a class="header">Jenny Hess</a>
+                    <a class="header">Rodgers</a>
                     <div class="description">
                       Last upload{" "}
                       <a>
@@ -130,7 +130,7 @@ function Content() {
                     class="ui avatar image"
                   />
                   <div class="content">
-                    <a class="header">Veronika Ossi</a>
+                    <a class="header">Mayaka Osinde</a>
                     <div class="description">
                       Last upload{" "}
                       <a>
@@ -143,6 +143,129 @@ function Content() {
             </div>
           </div>
           <div class="ui vertical divider">And</div>
+        </div>
+      </section>
+      {/* A list of my projects */}
+      <section>
+        <div role="list" class="ui divided relaxed list">
+          <h4>Recent Projects & Quick Actions</h4> 
+          <div role="listitem" class="item">
+            <i
+              aria-hidden="true"
+              class="folder open outline large icon middle aligned"
+            ></i>
+            <div class="content">
+              <a class="header">Semantic-Org/Semantic-UI</a>
+              <span>
+                <div>
+                  <div class="ui right floated buttons">
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align left icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align center icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align right icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align justify icon"></i>
+                    </button>
+                  </div>{" "}
+                  <div class="ui right floated buttons">
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="bold icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="underline icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="text width icon"></i>
+                    </button>
+                  </div>
+                </div>
+              </span>
+              <a class="description">Updated 10 mins ago</a>
+            </div>
+          </div>
+          <div role="listitem" class="item">
+            <i
+              aria-hidden="true"
+              class="folder open outline large icon middle aligned"
+            ></i>
+            <div class="content">
+              <a class="header">Semantic-Org/Semantic-UI-Docs</a>
+              <span>
+                <div>
+                  <div class="ui right floated buttons">
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align left icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align center icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align right icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align justify icon"></i>
+                    </button>
+                  </div>{" "}
+                  <div class="ui right floated buttons">
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="bold icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="underline icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="text width icon"></i>
+                    </button>
+                  </div>
+                </div>
+              </span>
+              <a class="description">Updated 22 mins ago</a>
+            </div>
+          </div>
+          <div role="listitem" class="item">
+            <i
+              aria-hidden="true"
+              class="folder open outline large icon middle aligned"
+            ></i>
+            <div class="content">
+              <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
+              <span>
+                <div>
+                  <div class="ui right floated buttons">
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align left icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align center icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align right icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="align justify icon"></i>
+                    </button>
+                  </div>{" "}
+                  <div class="ui right floated buttons">
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="bold icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="underline icon"></i>
+                    </button>
+                    <button class="ui icon button">
+                      <i aria-hidden="true" class="text width icon"></i>
+                    </button>
+                  </div>
+                </div>
+              </span>
+              <a class="description">Updated 34 mins ago</a>
+            </div>
+          </div>
         </div>
       </section>
     </body>
