@@ -1,22 +1,20 @@
 import React from "react";
 
-function LandingPageBar() {
+function NavBar() {
   return (
     <section className="ui segment">
       <div>
         <div class="ui">
-          <h2 class="ui header center aligned ">
+          <h2 class="ui left aligned brown header">
             LEVITATE
-            <span className="ui right floated button">
-              <div class="ui buttons">
+              <div class="ui small right floated buttons">
                 <button class="ui button">Sign Up</button>
                 <div class="or"></div>
-                <button class="ui positive button">Sign In</button>
+                <button class="ui brown button">Sign In</button>
               </div>
-            </span>
           </h2>
         </div>
       </div>
     </section>
   );
-}
+} export default NavBar
