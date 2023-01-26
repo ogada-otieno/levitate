@@ -1,18 +1,21 @@
 import React from "react";
-import { useState, useEffect, useRef} from "react"
 
+function LoginForm() {
+  return (
+    <form class="ui form">
+      <div class="field">
+        <label>Email</label>
+        <input placeholder="Email" />
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input placeholder="Password" />
+      </div>
+      <button class="ui button" type="submit">
+        Sign In
+      </button>
+    </form>
+  );
+}
 
-function LoginForm(){
-
-    
-
-    return (
-        <div>
-            <input type="text" placeholder="Enter Username"></input>
-            <input type="text" placeholder="Enter Password"></input>
-            <button type="submit">Sign Up</button>
-        </div>
-    )
-
-} 
 export default LoginForm
