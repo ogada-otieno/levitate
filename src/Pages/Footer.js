@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <footer className="footer">
+      <h3>Levitate</h3>
+      <ul>@2023 Copyright: Levitate</ul>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
