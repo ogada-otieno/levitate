@@ -12,8 +12,19 @@ code {
     monospace;
 }
 
-h3, h5 {
-  display: inline;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* entire content structure */
+* {
+  margin: 0;
+  font-family: Quicksand;
+  color: #333;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 /* form section */
@@ -48,13 +59,36 @@ button {
   border-bottom: 1px solid #eee; 
 }
 
-/* .project-preview:last-child {
-  border-bottom: none;
-} */
+.project-preview:hover {
+  box-shadow: 1px 3px 5px rgba(40, 54, 24, 0.6);
+}
 
-.project-preview h3, h5 {
+.project-preview h2 {
   font-size: 20px;
   margin-bottom: 8px;
-  color: #f1356d;
+  color: #af2a5f;
+}
+
+.project-preview a {
+  text-decoration: none;
+}
+
+/* User details */
+.user-details {
+  margin-bottom: 20px;
+  display: block;
+
+}
+
+.user-avatar {
+  margin-bottom: 10px;
+}
+
+.user-info {
+  margin-top: 20px;
+}
+
+.user-info a {
+  display: block;
 }
 
