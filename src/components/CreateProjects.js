@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import { redirect } from "react-router-dom";
 
 function CreateProjects() {
   // const [projectData, setProjectData] = useState();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [isPending, setIsPending] = useState(false);
 
   let accessToken =
     "722f0dd81bb8f53c1b09b5b847c5653a85de14e3a53a394e0582815aa6a84936";
@@ -12,6 +13,7 @@ function CreateProjects() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let newEntry = { name, description };
+    setIsPending(true);
     let url =
       "https://api.dribbble.com/v2/projects?access_token=722f0dd81bb8f53c1b09b5b847c5653a85de14e3a53a394e0582815aa6a84936";
 
@@ -23,7 +25,13 @@ function CreateProjects() {
       },
       // mode: "no-cors",
       body: JSON.stringify(newEntry),
-    }).then((res) => console.log(res));
+    }).then((res) => {
+      // console.log(res);
+      console.log("New project created");
+      setIsPending(false);
+      // history("/");
+      redirect("/");
+    });
 
     console.log(newEntry);
     window.location.reload();
@@ -48,9 +56,12 @@ function CreateProjects() {
           placeholder="Description"
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
-        <button type="submit" className="add-btn">
-          Add Project
-        </button>
+        {!isPending && <button className="add-btn">Add Project</button>}
+        {isPending && (
+          <button className="add-btn" disabled>
+            Adding Project
+          </button>
+        )}
       </form>
     </div>
   );

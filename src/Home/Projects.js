@@ -1,13 +1,13 @@
 import React from "react";
 import DisplayProjects from "../components/DisplayProjects";
 
-const Home = () => {
+function Projects() {
   return (
     <div>
-      <h1>Levitate Home Page</h1>
-      {/* <DisplayProjects /> */}
+      Projects
+      <DisplayProjects />
     </div>
   );
-};
+}
 
-export default Home;
+export default Projects;

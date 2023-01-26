@@ -40,3 +40,21 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Project previews */
+.project-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee; 
+}
+
+/* .project-preview:last-child {
+  border-bottom: none;
+} */
+
+.project-preview h3, h5 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #f1356d;
+}
+

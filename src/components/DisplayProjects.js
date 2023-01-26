@@ -25,7 +25,7 @@ function DisplayProjects() {
     fetchProjects();
   }, []);
 
-  const display = projects.map((project) => {
+  const project = projects.map((project) => {
     return (
       <div key={project.id}>
         <h3>{project.name}: </h3>
@@ -41,8 +41,10 @@ function DisplayProjects() {
 
   return (
     <div>
-      {display.length > 0 ? <>{display}</> : <p>No projects...</p>}
-      <CreateProjects newProjects={newProjects} />
+      <div>{project.length > 0 ? <>{project}</> : <p>No projects...</p>}</div>
+      <div className="project-preview">
+        <CreateProjects newProjects={newProjects} />
+      </div>
     </div>
   );
 }
