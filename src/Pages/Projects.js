@@ -4,7 +4,9 @@ import DisplayProjects from "../components/DisplayProjects";
 function Projects() {
   return (
     <div>
-    <h2>Projects</h2>
+      <div className="title">
+        <h2>Projects</h2>
+      </div>
       <DisplayProjects />
     </div>
   );

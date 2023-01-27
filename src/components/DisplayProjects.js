@@ -20,8 +20,6 @@ function DisplayProjects() {
       .catch((err) => console.log(err));
   };
 
-  //   console.log(projects);
-
   useEffect(() => {
     fetchProjects();
   }, []);

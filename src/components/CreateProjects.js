@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { redirect, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function CreateProjects() {
   // const [projectData, setProjectData] = useState();
@@ -14,7 +14,9 @@ function CreateProjects() {
   // console.log(location.search);
 
   let id = new URLSearchParams(location.search).get("id");
-  console.log(id);
+  // console.log(id);
+
+  const navigate = useNavigate();
 
   const handleUpdate = (id) => {
     let newEntry = { name, description };
@@ -28,11 +30,9 @@ function CreateProjects() {
       },
       body: JSON.stringify(newEntry),
     }).then((res) => {
-      // console.log(res);
       console.log("New project created");
       setIsPending(false);
-      // history("/");
-      redirect("/");
+      navigate("/projects");
     });
   };
 
@@ -59,8 +59,7 @@ function CreateProjects() {
       // console.log(res);
       console.log("New project created");
       setIsPending(false);
-      // history("/");
-      redirect("/");
+      navigate("/projects");
     });
 
     // console.log(newEntry);

@@ -90,6 +90,12 @@ background: rgb(197, 17, 17);
 
 .user-avatar {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 50%;
 }
 
 .user-info {
@@ -162,5 +168,10 @@ background: rgb(197, 17, 17);
   padding: 20px;
   font-size: 20px;
   color: white;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
 }
 

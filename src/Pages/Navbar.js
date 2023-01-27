@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -6,7 +7,11 @@ function Navbar() {
       <div>
         <ul className="navbar-list">
           <li className="navbar-item">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <Link to="/projects">Projects</Link>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <Link to="/create">Add Project</Link>
           </li>
         </ul>
       </div>
@@ -19,11 +24,11 @@ function Navbar() {
             <a href="#">Signup</a>
           </li>
           <li className="navbar-item">
-            <a href="#">Profile</a>
+            <Link to="/profile">Profile</Link>
           </li>
         </ul>
 
-        <form className="navbar-search-form">
+        {/* <form className="navbar-search-form">
           <input
             className="navbar-search-input"
             type="text"
@@ -32,7 +37,7 @@ function Navbar() {
           <button className="navbar-search-button" type="submit">
             Search
           </button>
-        </form>
+        </form> */}
       </div>
     </nav>
   );
