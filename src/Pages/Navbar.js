@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="ui navbar brown">
       <div>
         <ul className="navbar-list">
           <li className="navbar-item">
             <Link to="/">Home</Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <Link to="/projects">Projects</Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <Link to="/create">Add Project</Link>
           </li>
         </ul>
@@ -18,10 +18,13 @@ function Navbar() {
       <div className="rightitems">
         <ul className="navbar-list">
           <li className="navbar-item">
-            <a href="#">Login</a>
+            <Link to="/login">Login</Link>
           </li>
           <li className="navbar-item">
-            <a href="#">Signup</a>
+            <Link to="/signup">Signup</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/login">Logout</Link>
           </li>
           <li className="navbar-item">
             <Link to="/profile">Profile</Link>

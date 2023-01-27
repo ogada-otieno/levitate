@@ -43,9 +43,10 @@ function UserProfile() {
                 {userData.bio}
               </p>
               <p>{userData.location}</p>
-              <a href="mailto:{userData.email}">Send email</a>
+              <a href="mailto:{userData.email}">Send email</a> 
+              {/* eslint-disable-next-line */}
               <a href={userData.html_url} target="_blank">
-                Dribbble Account
+                Dribbble
               </a>
             </div>
           </div>

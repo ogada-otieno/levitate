@@ -15,17 +15,17 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* entire content structure */
-* {
+/* * {
   margin: 0;
   font-family: Quicksand;
   color: #333;
-}
+} */
 
-.content {
+/* .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-}
+} */
 
 /* form section */
 label {
@@ -113,7 +113,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #3498db;
+  background-color: rgb(117, 84, 84);
   padding: 10px 20px;
   text-align: right;
 }
@@ -164,7 +164,7 @@ img {
 .footer{
   text-align: center;
   margin-top: 550px;
-  background-color: rgb(173, 201, 214);
+  background-color: black;
   padding: 20px;
   font-size: 20px;
   color: white;

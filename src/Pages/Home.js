@@ -1,9 +1,10 @@
 import React from "react";
+import Content from "../components/Content";
 
 const Home = () => {
   return (
     <div>
-      <h1>Levitate Home Page similar to homepage</h1>
+      {/* <h1>Levitate Home Page similar to homepage</h1>
       <b>
       <p>navbar at the top and footer at the bottom</p>
         <p>1.Login </p>
@@ -18,7 +19,8 @@ const Home = () => {
           details. Also delete it
         </p>
         <p>Update project</p>
-      </b>
+      </b> */}
+      <Content />
     </div>
   );
 };
