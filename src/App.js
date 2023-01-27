@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div >
+      <div className="content">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<SignUpForm />} />
