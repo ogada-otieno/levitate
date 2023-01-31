@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logout from "../components/Logout";
+import { isAuthenticated } from "../components/PrivateRoutes";
 
 function Navbar() {
   return (
@@ -17,30 +19,21 @@ function Navbar() {
       </div>
       <div className="rightitems">
         <ul className="navbar-list">
-          <li className="navbar-item">
+         {!isAuthenticated() && ( <><li className="navbar-item">
             <Link to="/login">Login</Link>
           </li>
-          <li className="navbar-item">
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li className="navbar-item">
+          
+            <li className="navbar-item">
+              <Link to="/signup">Signup</Link>
+            </li></>
+          )}
+          <li className="navbar-item" onClick={() => Logout()}>
             <Link to="/login">Logout</Link>
           </li>
           <li className="navbar-item">
             <Link to="/profile">Profile</Link>
           </li>
         </ul>
-
-        {/* <form className="navbar-search-form">
-          <input
-            className="navbar-search-input"
-            type="text"
-            placeholder="Search..."
-          />
-          <button className="navbar-search-button" type="submit">
-            Search
-          </button>
-        </form> */}
       </div>
     </nav>
   );
