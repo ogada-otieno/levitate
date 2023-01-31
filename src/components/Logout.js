@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from "react";
 
 const Logout = () => {
-    localStorage.clear()
-    window.location.href = "/login"
-  return 
-}
+  localStorage.clear();
+  window.location.href = "/";
+  return;
+};
 
-export default Logout
+export default Logout;
