@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function SignUpForm() {
+  const db = require("./db.json");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -17,7 +18,21 @@ function SignUpForm() {
     } else if (!/^[^\s@]+@[^\s@]+.[^\s@]+$/.test(email)) {
       setValidationError("Invalid email format");
     } else {
-      // submit form
+      const registeredUser = {
+        id: Math.random() * 1000000000,
+        email: email,
+        password: password,
+      };
+
+      db.users.unshift(registeredUser);
+
+      db.users.map((user) => {
+        localStorage.setItem("id", user.id);
+        localStorage.setItem("email", user.email);
+        localStorage.setItem("password", user.password);
+      });
+
+      console.log(localStorage.getItem("email"));
     }
   };
 
@@ -36,7 +51,8 @@ function SignUpForm() {
           onChange={(e) => setPassword(e.target.value)}
           type="password"
           class="field"
-        ></input><br/>
+        ></input>
+        <br />
         <input
           placeholder="Confirm Password"
           value={confirmPassword}
@@ -44,9 +60,9 @@ function SignUpForm() {
           type="password"
           class="field"
         ></input>
-        <button type="submit"
-        className = "ui tiny brown button"
-        >Submit</button>
+        <button type="submit" className="ui tiny brown button">
+          Submit
+        </button>
       </form>
       {validationError && <p>{validationError}</p>}
     </div>

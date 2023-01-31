@@ -14,7 +14,14 @@ function LoginForm() {
     } else if (!/^[^\s@]+@[^\s@]+.[^\s@]+$/.test(email)) {
       setValidationError("Invalid email format");
     } else {
-      // submit form
+      const storedEmail = localStorage.getItem("email")
+      const storedPassword = localStorage.getItem("password")
+
+      if (email === storedEmail && password === storedPassword) {
+        console.log(`${storedEmail} is authorised`);
+      } else {
+        console.log("Not authorised");
+      }
     }
   };
 

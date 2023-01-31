@@ -12,8 +12,8 @@ import NavBar from "./components/Validation/NavBar";
 function App() {
   return (
     <div>
-      {/* <LoginValidation/> */}
-      <SignUpValidation/>
+      <LoginValidation/>
+      {/* <SignUpValidation/> */}
 
     </div>
   )
