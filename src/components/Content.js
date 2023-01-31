@@ -3,47 +3,43 @@ import { useNavigate } from "react-router-dom";
 import DisplayProjects from "./DisplayProjects";
 
 function Content() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
-    <body>
-      {/* Search and add section */}
+    <>
+      <h1>LEVITATE</h1>
+      {/* Sign up and login section */}
       <section>
-        <div class="ui placeholder brown segment">
-          <div class="ui stackable center aligned two column brown grid">
-            <div class="ui vertical divider">Or</div>
-            <div class="middle aligned row">
-              <div class="column">
-                <div class="ui icon header">
-                  <i aria-hidden="true" class="search icon"></i>Search your
-                  projects
+        <div className="ui placeholder brown segment">
+          <div className="ui stackable center aligned two column brown grid">
+            <div className="ui vertical divider">Or</div>
+            <div className="middle aligned row">
+              <div className="column">
+                <div className="ui icon header">
+                  <i aria-hidden="true" className="user icon"></i>Already a
+                  user?
                 </div>
-                <div class="ui search">
-                  <div class="ui icon input">
-                    <input
-                      type="text"
-                      autoComplete="off"
-                      value=""
-                      placeholder="Search projects..."
-                      tabindex="0"
-                      class="prompt"
-                    />
-                    <i aria-hidden="true" class="brown search icon"></i>
-                  </div>
-                  <div class="results transition">
-                    <div class="message empty">
-                      <div class="header">No results found.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="ui icon header">
-                  <i aria-hidden="true" class="world icon"></i>Add New Project
-                </div>
-                <button class="ui brown button"
-                onClick={() => {navigate("/create")}}
+                <button
+                  className="ui brown button"
+                  onClick={() => {
+                    navigate("/login");
+                  }}
                 >
-                Create</button>
+                  Log In
+                </button>
+              </div>
+              <div className="column">
+                <div className="ui icon header">
+                  <i aria-hidden="true" className="user icon"></i>Don't have an
+                  account?
+                </div>
+                <button
+                  className="ui brown button"
+                  onClick={() => {
+                    navigate("/signup");
+                  }}
+                >
+                  Sign Up
+                </button>
               </div>
             </div>
           </div>
@@ -51,9 +47,9 @@ function Content() {
       </section>
       {/* About us and conect with friends section */}
       <section>
-        <div class="ui segment">
-          <div class="ui very relaxed two column grid">
-            <div class="column">
+        <div className="ui segment">
+          <div className="ui very relaxed two column grid">
+            <div className="column">
               <p>
                 Our mission at Levitate is to enable you to breath life into the
                 art your create with us.
@@ -64,17 +60,17 @@ function Content() {
                 or as loud and as popular as your art commands.
               </p>
             </div>
-            <div class="column">
+            <div className="column">
               <h4>Connect with friends</h4>
-              <div role="list" class="ui list">
-                <div role="listitem" class="item">
+              <div role="list" className="ui list">
+                <div role="listitem" className="item">
                   <img
                     src="https://react.semantic-ui.com/images/avatar/small/rachel.png"
-                    class="ui avatar image"
+                    className="ui avatar image"
                   />
-                  <div class="content">
-                    <a class="header">Rachel</a>
-                    <div class="description">
+                  <div className="content">
+                    <a className="header">Rachel</a>
+                    <div className="description">
                       Last upload{" "}
                       <a>
                         <b>6 Hours</b>
@@ -83,14 +79,14 @@ function Content() {
                     </div>
                   </div>
                 </div>
-                <div role="listitem" class="item">
+                <div role="listitem" className="item">
                   <img
                     src="https://react.semantic-ui.com/images/avatar/small/lindsay.png"
-                    class="ui avatar image"
+                    className="ui avatar image"
                   />
-                  <div class="content">
-                    <a class="header">Lindsay</a>
-                    <div class="description">
+                  <div className="content">
+                    <a className="header">Lindsay</a>
+                    <div className="description">
                       Last upload{" "}
                       <a>
                         <b>2 days</b>
@@ -99,14 +95,14 @@ function Content() {
                     </div>
                   </div>
                 </div>
-                <div role="listitem" class="item">
+                <div role="listitem" className="item">
                   <img
                     src="https://react.semantic-ui.com/images/avatar/small/matthew.png"
-                    class="ui avatar image"
+                    className="ui avatar image"
                   />
-                  <div class="content">
-                    <a class="header">Ali</a>
-                    <div class="description">
+                  <div className="content">
+                    <a className="header">Ali</a>
+                    <div className="description">
                       Last upload{" "}
                       <a>
                         <b>12 hours</b>
@@ -115,14 +111,14 @@ function Content() {
                     </div>
                   </div>
                 </div>
-                <div role="listitem" class="item">
+                <div role="listitem" className="item">
                   <img
                     src="https://react.semantic-ui.com/images/avatar/small/jenny.jpg"
-                    class="ui avatar image"
+                    className="ui avatar image"
                   />
-                  <div class="content">
-                    <a class="header">Rodgers</a>
-                    <div class="description">
+                  <div className="content">
+                    <a className="header">Rodgers</a>
+                    <div className="description">
                       Last upload{" "}
                       <a>
                         <b>Yesterday</b>
@@ -130,14 +126,14 @@ function Content() {
                     </div>
                   </div>
                 </div>
-                <div role="listitem" class="item">
+                <div role="listitem" className="item">
                   <img
                     src="https://react.semantic-ui.com/images/avatar/small/veronika.jpg"
-                    class="ui avatar image"
+                    className="ui avatar image"
                   />
-                  <div class="content">
-                    <a class="header">Mayaka Osinde</a>
-                    <div class="description">
+                  <div className="content">
+                    <a className="header">Mayaka Osinde</a>
+                    <div className="description">
                       Last upload{" "}
                       <a>
                         <b>just now.</b>
@@ -148,136 +144,16 @@ function Content() {
               </div>
             </div>
           </div>
-          <div class="ui vertical divider">And</div>
+          <div className="ui vertical divider">And</div>
         </div>
       </section>
       {/* A list of my projects */}
       <section>
-        <div role="list" class="ui divided relaxed list">
-          <h4>Recent Projects & Quick Actions</h4>
-          {/* <>
-          <div role="listitem" class="item">
-            <i
-              aria-hidden="true"
-              class="folder open outline large icon middle aligned"
-            ></i>
-            <div class="content">
-              <a class="header">Semantic-Org/Semantic-UI</a>
-              <span>
-                <div>
-                  <div class="ui right floated buttons">
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align left icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align center icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align right icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align justify icon"></i>
-                    </button>
-                  </div>{" "}
-                  <div class="ui right floated buttons">
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="bold icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="underline icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="text width icon"></i>
-                    </button>
-                  </div>
-                </div>
-              </span>
-              <a class="description">Updated 10 mins ago</a>
-            </div>
-          </div>
-          <div role="listitem" class="item">
-            <i
-              aria-hidden="true"
-              class="folder open outline large icon middle aligned"
-            ></i>
-            <div class="content">
-              <a class="header">Semantic-Org/Semantic-UI-Docs</a>
-              <span>
-                <div>
-                  <div class="ui right floated buttons">
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align left icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align center icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align right icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align justify icon"></i>
-                    </button>
-                  </div>{" "}
-                  <div class="ui right floated buttons">
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="bold icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="underline icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="text width icon"></i>
-                    </button>
-                  </div>
-                </div>
-              </span>
-              <a class="description">Updated 22 mins ago</a>
-            </div>
-          </div>
-          <div role="listitem" class="item">
-            <i
-              aria-hidden="true"
-              class="folder open outline large icon middle aligned"
-            ></i>
-            <div class="content">
-              <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
-              <span>
-                <div>
-                  <div class="ui right floated buttons">
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align left icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align center icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align right icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="align justify icon"></i>
-                    </button>
-                  </div>{" "}
-                  <div class="ui right floated buttons">
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="bold icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="underline icon"></i>
-                    </button>
-                    <button class="ui icon button">
-                      <i aria-hidden="true" class="text width icon"></i>
-                    </button>
-                  </div>
-                </div>
-              </span>
-              <a class="description">Updated 34 mins ago</a>
-            </div>
-          </div>
-          </> */}
-          <DisplayProjects />
+        <div role="list" className="ui divided relaxed list">
+          {/* <DisplayProjects /> */}
         </div>
       </section>
-    </body>
+    </>
   );
 }
 export default Content;

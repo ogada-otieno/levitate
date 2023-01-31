@@ -10,19 +10,34 @@ import NotFound from "./components/NotFound";
 import UserProfile from "./components/UserProfile";
 import SignUpForm from "./components/SignUpForm";
 import LoginForm from "./components/LoginForm";
+import PrivateRoutes from "./components/PrivateRoutes";
+import Homescreen from "./Pages/Homescreen";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <div >
+      <div className="content">
         <Routes>
+          {/* <Route
+            exact
+            path="/profile"
+            element={<PrivateRoutes Components={<UserProfile />} />}
+          /> */}
+          <Route
+            exact
+            path="/profile"
+            element={
+              <PrivateRoutes
+                Components={<Homescreen Component={<UserProfile />} />}
+              />
+            }
+          />
+          <Route element={<Navbar />} />
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="/create" element={<CreateProjects />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<SignUpForm />} />
           <Route exact path="/login" element={<LoginForm />} />
-          <Route exact path="/profile" element={<UserProfile />} />
-          <Route exact path="/projects" element={<Projects />} />
-          <Route exact path="/create" element={<CreateProjects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
