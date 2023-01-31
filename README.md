@@ -35,6 +35,7 @@ levitate-ten.vercel.app
 ## Checklist
  - GET request and display projects list
  - POST request and display projects list
+ - GET request and display user's details
 
  
   
