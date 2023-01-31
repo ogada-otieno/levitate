@@ -2,6 +2,12 @@
 
 Dribbble is a platform that allows users to showcase their technical talents such as product design. Computer programming etc. Your task is to create a similar type of application using the dribbble API: https://developer.dribbble.com/v2/
 
+## Technologies used
+ 1. ReactJS
+ 2. Node.js
+ 3. Semantic UI
+ 4. Firebase
+
 ## Minimum Viable Product
 The following requirements MUST be delivered in order to consider your submission as complete:
 
@@ -30,9 +36,5 @@ Coming up soon
  - GET request and display projects list
  - POST request and display projects list
 
- ## Technologies used
- 1. ReactJS
- 2. Node.js
- 3. Semantic UI
- 4. Firebase
+ 
   
