@@ -30,7 +30,7 @@ The following deliverables will earn you extra points:
 ## Use the link below to access the application
 
 ```bash
-Coming up soon
+levitate-ten.vercel.app
 ```
 ## Checklist
  - GET request and display projects list
