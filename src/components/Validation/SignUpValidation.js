@@ -1,12 +1,13 @@
 import React from "react";
-import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
 import NavBar from "./NavBar";
 
 function SignUpValidation(){
     return(
         <div>
             <NavBar/>
-            <LoginForm/>
+            <SignUpForm/>
         </div>
     )
 }
+export default SignUpValidation

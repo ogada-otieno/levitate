@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignUpForm() {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [tel, setTel] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [validationError, setValidationError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,8 +26,8 @@ function SignUpForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="ui small left floated form">
+    <div class="ui segment">
+      <form onSubmit={handleSubmit} className="ui small center aligned form">
         <input
           placeholder="Enter email"
           value={email}
