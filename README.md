@@ -24,9 +24,15 @@ The following deliverables will earn you extra points:
 ## Use the link below to access the application
 
 ```bash
-http://localhost:3000/?code=19a0419826e6491f364c23ea461341776a57f0ac7466000a79033230c252e018
+Coming up soon
 ```
 ## Checklist
  - GET request and display projects list
  - POST request and display projects list
+
+ ## Technologies used
+ 1. ReactJS
+ 2. Node.js
+ 3. Semantic UI
+ 4. Firebase
   
