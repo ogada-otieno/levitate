@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const LandingPage = () => {
   const navigate = useNavigate();
 
-
   const myStyle = {
     backgroundImage: `url(${image})`,
     height: "100vh",
@@ -19,6 +18,7 @@ const LandingPage = () => {
     <>
       <div style={myStyle} className="ui segment"></div>
       <div className="ui text container">
+        <h1 className="font-link">Levitate</h1>
         <h3 className="ui brown header">About Us:</h3>
         <p>
           Our mission at Levitate is to enable you to breath life into the art
@@ -30,19 +30,17 @@ const LandingPage = () => {
         </p>
       </div>
 
-
-
-      
       <div className="ui stackable center aligned two column grid">
         <div className="middle aligned row">
           <div className="column">
             <div className="ui small icon header">
-              <i aria-hidden="true" className="ui small user icon"></i>Already a user?
+              <i aria-hidden="true" className="ui small user icon"></i>Already a
+              user?
             </div>
             <button
               className="ui brown button"
               onClick={() => {
-                navigate("/login")
+                navigate("/login");
               }}
             >
               Log In
@@ -50,8 +48,8 @@ const LandingPage = () => {
           </div>
           <div className="column">
             <div className="ui small icon header">
-              <i aria-hidden="true" className="ui small user icon"></i>Don't have an
-              account?
+              <i aria-hidden="true" className="ui small user icon"></i>Don't
+              have an account?
             </div>
             <button
               className="ui brown button"
