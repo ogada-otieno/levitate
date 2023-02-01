@@ -7,6 +7,7 @@ Dribbble is a platform that allows users to showcase their technical talents suc
  2. Node.js
  3. Semantic UI
  4. Firebase
+ 5. Vercel for deployment
 
 ## Minimum Viable Product
 The following requirements MUST be delivered in order to consider your submission as complete:
