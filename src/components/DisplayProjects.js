@@ -40,21 +40,34 @@ function DisplayProjects() {
 
   const project = projects.map((project) => {
     return (
-      <div key={project.id} className="project-preview">
-        <Link to={`/projects/${project.id}`}>
-          <h2>{project.name} </h2>
-          <p>{project.description}</p>
-        </Link>
-        <button onClick={() => handleUpdate(project.id)}>Update</button>
-        &nbsp; &nbsp;
-        <button
-          type="button"
-          className="delete-btn"
-          onClick={() => handleDelete(project.id)}
+      <>
+        <div
+          role="list"
+          key={project.id}
+          className="ui divided project-preview middle aligned list"
         >
-          Delete
-        </button>
-      </div>
+          <div role="listitem" class="item">
+            <Link to={`/projects/${project.id}`}>
+              <h4 className="ui brown header">{project.name} </h4>
+              <p>{project.description}</p>
+            </Link>
+          </div> 
+
+          <div class="ui tiny buttons">
+            <button class="ui button" onClick={() => handleUpdate(project.id)}>
+              Update
+            </button>
+            <div class="or"></div>
+            <button
+              class="ui negative button"
+              type="button"
+              onClick={() => handleDelete(project.id)}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </>
     );
   });
 

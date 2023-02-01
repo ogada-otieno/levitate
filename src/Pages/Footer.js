@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <h3>Levitate</h3>
-      <ul>@2023 Copyright: Levitate</ul>
+      <h3>@2023 Copyright: Levitate</h3>
     </footer>
   );
 }
