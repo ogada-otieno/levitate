@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Homescreen = ({ Component }) => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       {Component}
     </div>
   );
