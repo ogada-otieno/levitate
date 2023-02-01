@@ -16,13 +16,9 @@ import Homescreen from "./Pages/Homescreen";
 function App() {
   return (
     <BrowserRouter>
+    <Navbar />
       <div className="content">
         <Routes>
-          {/* <Route
-            exact
-            path="/profile"
-            element={<PrivateRoutes Components={<UserProfile />} />}
-          /> */}
           <Route
             exact
             path="/profile"
@@ -32,7 +28,7 @@ function App() {
               />
             }
           />
-          <Route element={<Navbar />} />
+          {/* <Route element={<Navbar />} /> */}
           <Route exact path="/projects" element={<Projects />} />
           <Route exact path="/create" element={<CreateProjects />} />
           <Route exact path="/" element={<Home />} />
