@@ -1,6 +1,6 @@
 import React from "react";
-import LoginForm from "./LoginForm";
-import image from "../assets/wenhao-ryan-9LeeUdsGwOk-unsplash.jpg";
+// import LoginForm from "./LoginForm";
+import image from "./assets/wenhao-ryan-9LeeUdsGwOk-unsplash.jpg";
 import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
