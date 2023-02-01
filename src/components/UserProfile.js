@@ -27,34 +27,37 @@ function UserProfile() {
     if (userData) {
       return (
         <>
-          <div>
-            <Link to="/create">
-              <button className="add-btn">Add Project</button>
-            </Link>
-          </div>
-          <div className="user-details">
-            <div className="user-avatar">
-              <img src={userData.avatar_url} alt={userData.name} />
-            </div>
-            <div className="user-info">
+          <div className="">
+            <div className="ui floated segment">
+              <img
+                src={userData.avatar_url}
+                alt={userData.name}
+                className="ui small circular image"
+              />
               <h2>{userData.name}</h2>
               <p>
                 <b>Bio:</b>
                 {userData.bio}
               </p>
               <p>{userData.location}</p>
-              <a href="mailto:{userData.email}">Send email</a> 
+              <a href="mailto:{userData.email}">
+                <i className="ui small mail icon"></i>
+                Send email
+              </a>
               {/* eslint-disable-next-line */}
+              <br />
               <a href={userData.html_url} target="_blank">
+                <i className="ui small linkify icon"></i>
                 Dribbble
               </a>
             </div>
+            <div className=""></div>
           </div>
         </>
       );
     } else {
       return (
-        <div className="user-details">
+        <div className="">
           <p>User details not available...</p>
         </div>
       );
@@ -62,13 +65,30 @@ function UserProfile() {
   };
 
   return (
-    <div>
+    <div className="ui small floated segment">
+      <h3 className="ui dividing header">My profile</h3>
       {renderUser()}
-      <DisplayProjects />
+      <h3 className="ui dividing header">
+        My projects
+        <br/>
+  
+        <span  >
+            <Link to="/create">
+              <button class="ui tiny justified brown animated button">
+                <div class="visible content">Add New Project</div>
+                <div class="hidden content">
+                  <i aria-hidden="true">Get Started</i>
+                </div>
+              </button>
+            </Link>
+        </span>
+      </h3>
+
+      <div>
+        <DisplayProjects />
+      </div>
     </div>
   );
 }
 
 export default UserProfile;
-
-
