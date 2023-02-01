@@ -3,7 +3,7 @@
 const Logout = () => {
   localStorage.clear();
   window.location.href = "/";
-  return;
+  // return;
 };
 
 export default Logout;
