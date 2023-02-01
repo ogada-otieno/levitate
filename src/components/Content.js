@@ -1,44 +1,51 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import DisplayProjects from "./DisplayProjects";
+// import { isAuthenticated } from "../components/PrivateRoutes";
 
 function Content() {
   const navigate = useNavigate();
   return (
     <>
-      <h1>LEVITATE</h1>
+      {/* <h1>LEVITATE</h1> */}
       {/* Sign up and login section */}
       <section>
         <div className="ui placeholder brown segment">
           <div className="ui stackable center aligned two column brown grid">
-            <div className="ui vertical divider">Or</div>
+            <div className="ui vertical divider">OR</div>
             <div className="middle aligned row">
-              <div className="column">
-                <div className="ui icon header">
-                  <i aria-hidden="true" className="user icon"></i>Already a
-                  user?
+              <>
+                <div class="column">
+                  <div class="ui icon header">
+                    <i aria-hidden="true" class="search icon"></i>Search your
+                    projects
+                  </div>
+                  <div class="ui search">
+                    <div class="ui icon input">
+                      <input
+                        type="text"
+                        autoComplete="off"
+                        value=""
+                        placeholder="Search projects..."
+                        tabindex="0"
+                        class="prompt"
+                      />
+                      <i aria-hidden="true" class="brown search icon"></i>
+                    </div>
+                  </div>
+                </div>
+              </>
+
+              <div class="column">
+                <div class="ui icon header">
+                  <i aria-hidden="true" class="world icon"></i>Add New Project
                 </div>
                 <button
-                  className="ui brown button"
+                  class="ui brown button"
                   onClick={() => {
-                    navigate("/login");
+                    navigate("/create");
                   }}
                 >
-                  Log In
-                </button>
-              </div>
-              <div className="column">
-                <div className="ui icon header">
-                  <i aria-hidden="true" className="user icon"></i>Don't have an
-                  account?
-                </div>
-                <button
-                  className="ui brown button"
-                  onClick={() => {
-                    navigate("/signup");
-                  }}
-                >
-                  Sign Up
+                  Create
                 </button>
               </div>
             </div>

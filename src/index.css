@@ -1,30 +1,42 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Sassy+Frass&display=swap");
 
 /* entire content structure */
-* {
+/* * {
   margin: 0;
   font-family: Quicksand;
   color: #333;
-} 
+}  */
 
-.content {
+/* .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+} */
+/* landing page */
+.font-link {
+  font-size: 150px;
+  font-family: "Sassy Frass", cursive;
+}
+
+.font-link-nav {
+  font-size: 80px;
+  font-family: "Sassy Frass", cursive;
+  color: #171817;
 }
 
 /* form section */
@@ -33,7 +45,8 @@ label {
   display: block;
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   width: 100%;
   margin: 10px 0;
@@ -60,7 +73,7 @@ button {
 .project-preview {
   padding: 10px 16px;
   margin: 20px 0;
-  border-bottom: 1px solid #eee; 
+  border-bottom: 1px solid #eee;
 }
 
 .project-preview:hover {
@@ -77,15 +90,14 @@ button {
   text-decoration: none;
 }
 
-.delete-btn{
-background: rgb(197, 17, 17);
+.delete-btn {
+  background: rgb(197, 17, 17);
 }
 
 /* User details */
 .user-details {
   margin-bottom: 20px;
   display: block;
-
 }
 
 .user-avatar {
@@ -132,10 +144,11 @@ img {
 }
 
 .navbar-item a {
-  color: white;
+  color: rgb(24, 22, 22);
   text-decoration: none;
+  /* font-size: 20px; */
 }
-.rightitems{
+.rightitems {
   display: flex;
 }
 
@@ -161,7 +174,7 @@ img {
   padding: 5px 10px;
 }
 
-.footer{
+.footer {
   text-align: center;
   margin-top: 550px;
   background-color: black;
@@ -174,4 +187,3 @@ img {
   display: flex;
   justify-content: center;
 }
-

@@ -12,6 +12,7 @@ import SignUpForm from "./components/SignUpForm";
 import LoginForm from "./components/LoginForm";
 import PrivateRoutes from "./components/PrivateRoutes";
 import Homescreen from "./Pages/Homescreen";
+import Content from "./components/Content";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<SignUpForm />} />
           <Route exact path="/login" element={<LoginForm />} />
+          <Route exact path="/dashboard" element={<Content />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

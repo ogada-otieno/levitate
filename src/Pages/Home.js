@@ -5,8 +5,9 @@ import LandingPage from "../components/LandingPage";
 const Home = () => {
   return (
     <div>
-      <Content />
-      {/* <LandingPage /> */}
+      {/* <Content /> */}
+      <LandingPage />
+
     </div>
   );
 };
