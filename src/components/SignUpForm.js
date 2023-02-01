@@ -34,6 +34,8 @@ function SignUpForm() {
         }),
       }
     );
+
+    navigate("/login")
   };
 
   return (
